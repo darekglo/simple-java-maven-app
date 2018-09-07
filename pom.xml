@@ -37,11 +37,11 @@
   <distributionManagement>
         <snapshotRepository>
             <id>maven-snapshots</id>
-            <url>http://localhost:8081/nexus/content/repositories/snapshots</url>
+            <url>http://localhost:8081/service/rest/repository/browse/maven-snapshots/</url>
         </snapshotRepository>
         <repository>
             <id>${repo.releases.credentials}</id>
-            <url>http://localhost:8081/nexus/content/repositories/snapshots</url>
+            <url>http://localhost:8081/service/rest/repository/browse/maven-releases/</url>
         </repository>
     </distributionManagement>
 </project>
