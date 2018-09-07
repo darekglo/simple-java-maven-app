@@ -35,13 +35,13 @@
     </plugins>
   </build>
   <distributionManagement>
-        <snapshotRepository>
-            <id>maven-snapshots</id>
-            <url>http://poc_nexus:8081/repository/maven-snapshots/</url>
-        </snapshotRepository>
-        <repository>
-            <id>maven-releases</id>
-            <url>http://poc_nexus:8081/repository/maven-releases/</url>
-        </repository>
-    </distributionManagement>
+    <snapshotRepository>
+      <id>maven-snapshots</id>
+      <url>${repo.snapshots.url}</url>
+    </snapshotRepository>
+    <repository>
+      <id>maven-releases</id>
+      <url>${repo.releases.url}</url>
+    </repository>
+  </distributionManagement>
 </project>
