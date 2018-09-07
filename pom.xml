@@ -36,7 +36,7 @@
   </build>
   <distributionManagement>
         <snapshotRepository>
-            <id>maven-snapshots</id>
+            <id>${repo.releases.credentials}</id>
             <url>http://localhost:8081/repository/maven-snapshots/</url>
         </snapshotRepository>
         <repository>
