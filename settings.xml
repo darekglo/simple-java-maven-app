@@ -7,12 +7,12 @@
         <server>
             <id>maven-snapshots</id>
             <username>operator</username>
-            <password>{gVU4IOUuieoHXgX8Kx80UyE+5rS0kSBw+rC6Cy/Fzd4=}</password>
+            <password>operator</password>
         </server>
         <server>
             <id>maven-releases</id>
             <username>operator</username>
-            <password>{gVU4IOUuieoHXgX8Kx80UyE+5rS0kSBw+rC6Cy/Fzd4=}</password>
+            <password>operator</password>
         </server>
     </servers>
 
@@ -20,20 +20,20 @@
         <profile>
             <id>poc</id>
             <properties>
-                <repo.snapshots.url>http://poc_nexus:8081/repository/maven-snapshots/</repo.snapshots.url>
-                <repo.releases.url>http://poc_nexus:8081/repository/maven-releases/</repo.releases.url>
+                <repo.snapshots.url>http://172.20.0.2:8081/repository/maven-snapshots/</repo.snapshots.url>
+                <repo.releases.url>http://172.20.0.2:8081/repository/maven-releases/</repo.releases.url>
             </properties>
             <!-- OVERRIDE Central Repository -->
             <repositories>
                 <repository>
                     <id>central</id>
-                    <url>http://poc_nexus:8081/repository/maven-public/</url>
+                    <url>http://172.20.0.2:8081/repository/maven-public/</url>
                 </repository>
             </repositories>
             <pluginRepositories>
                 <pluginRepository>
                     <id>central</id>
-                    <url>http://poc_nexus:8081/repository/maven-public/</url>
+                    <url>http://172.20.0.2:8081/repository/maven-public/</url>
                 </pluginRepository>
             </pluginRepositories>
         </profile>
