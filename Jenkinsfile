@@ -6,10 +6,22 @@ pipeline {
         }
     }
     stages {
-        stage('Build') {
+        stage('MASTER build') {
+            when {
+                branch 'master'
+            }
             steps {
-                sh 'mvn -B'
+                sh 'mvn -P poc clean deploy'
+            }
+        }
+        stage('BRANCH build') {
+            when {
+                not { branch 'master' }
+            }
+            steps {
+                sh 'mvn -P poc clean package'
             }
         }
     }
+
 }
